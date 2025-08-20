@@ -50,3 +50,4 @@ flask-notes-app/
 4. Open in browser:
    👉 http://127.0.0.1:5000
 
+<img width="1909" height="856" alt="Image" src="https://github.com/user-attachments/assets/eb164687-d6a0-45dc-a963-735a849055c5" />
