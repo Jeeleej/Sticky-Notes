@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ action }} Note</h2>
+<form method="post">
+    <p><input type="text" name="title" placeholder="Title" value="{{ note.title if note else '' }}" required></p>
+    <p><textarea name="content" rows="10" cols="50" placeholder="Write in Markdown..." required>{{ note.content if note else '' }}</textarea></p>
+    <p><button type="submit">{{ action }}</button></p>
+</form>
+{% endblock %}

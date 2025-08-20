@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ note.title }}</h2>
+<div>{{ html_content|safe }}</div>
+
+<a href="{{ url_for('edit_note', id=id) }}">✏️ Edit</a> | 
+<a href="#" onclick="deleteNote()">🗑️ Delete</a>
+
+<script>
+    function deleteNote() {
+        if (confirm("Delete this note?")) {
+            fetch("{{ url_for('delete_note', id=id) }}", {method:'POST'})
+                .then(() => window.location = "/");
+        }
+    }
+</script>
+
+{% endblock %}
